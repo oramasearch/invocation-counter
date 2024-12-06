@@ -1,0 +1,7 @@
+[package]
+name = "invocation-counter"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+keywords = ["counter", "concurrency", "data-structures", "memory-management", "invocation"]
+categories = ["algorithms", "concurrency", "data-structures", "memory-management"]
