@@ -3,5 +3,12 @@ name = "invocation-counter"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
+description = "Datastructure to answer to: how many times a function has been called in the last X minutes?"
 keywords = ["counter", "concurrency", "data-structures", "memory-management", "invocation"]
 categories = ["algorithms", "concurrency", "data-structures", "memory-management"]
+authors = [
+  "Tommaso Allevi <tomallevi@gmail.com>",
+]
+documentation = "https://docs.rs/invocation-counter"
+repository = "https://github.com/oramasearch/invocation-counter"
+homepage = "https://crates.io/crates/invocation-counter"
