@@ -1,5 +1,7 @@
 # Invocation counter
 
+[![Rust](https://github.com/oramasearch/invocation-counter/actions/workflows/ci.yml/badge.svg)](https://github.com/oramasearch/invocation-counter/actions/workflows/ci.yml)
+
 This data structure responses the following question: how many times a function has been called in the last X minutes?
 
 ## Installation
