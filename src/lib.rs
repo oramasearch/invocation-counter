@@ -1,6 +1,5 @@
 #![doc = include_str!("../README.md")]
 
-
 use std::{fmt::Debug, sync::Mutex};
 
 #[derive(Default)]
