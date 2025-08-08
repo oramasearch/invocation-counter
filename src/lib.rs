@@ -160,6 +160,38 @@ impl InvocationCounter {
         }
     }
 
+    /// Returns the slot count exponent used to create this counter.
+    ///
+    /// The actual number of slots is `2^slot_count_exp()`.
+    ///
+    /// # Examples
+    ///
+    /// ```rust
+    /// # use invocation_counter::InvocationCounter;
+    /// let counter = InvocationCounter::new(3, 4); // 8 slots, each covering 16 time units
+    /// assert_eq!(counter.slot_count_exp(), 3);
+    /// assert_eq!(1 << counter.slot_count_exp(), 8); // 2^3 = 8 slots
+    /// ```
+    pub fn slot_count_exp(&self) -> u8 {
+        self.slot_count_exp
+    }
+
+    /// Returns the slot size exponent used to create this counter.
+    ///
+    /// The actual size of each time interval is `2^slot_size_exp()` time units.
+    ///
+    /// # Examples
+    ///
+    /// ```rust
+    /// # use invocation_counter::InvocationCounter;
+    /// let counter = InvocationCounter::new(3, 4); // 8 slots, each covering 16 time units
+    /// assert_eq!(counter.slot_size_exp(), 4);
+    /// assert_eq!(1 << counter.slot_size_exp(), 16); // 2^4 = 16 time units per slot
+    /// ```
+    pub fn slot_size_exp(&self) -> u8 {
+        self.slot_size_exp
+    }
+
     /// Returns the total number of invocations within the specified time range.
     ///
     /// Unlike `count()` which uses a fixed sliding window, this method allows querying
